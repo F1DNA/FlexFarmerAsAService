@@ -2,8 +2,9 @@
 Run FlexFarmer as a service - written for Ubuntu Server
 Your mileage (Distro) may vary
 
-Visit [FlexPool.io](https://flexpool.io) to join the pool!
-
+Visit [FlexPool.io](https://flexpool.io) to join the pool! (Note that I am in no way affiliated with FlexPool other than pointing my NFT's at their address in hopes of getting some shinies in return
+Check r/flexpool for a download link of FlexFarmer
+Or - visit the [Discord](https://discord.gg/ck74hAum)
 
 # **Create the user and group that will run the service**
 
@@ -13,7 +14,7 @@ Visit [FlexPool.io](https://flexpool.io) to join the pool!
 
 `sudo vim /etc/systemd/system/flexfarmer.service`
 
-# **Paste this into service file and :wq + enter to save it**
+# **Paste this into service file**
 
 ```
 [Unit]
@@ -34,6 +35,8 @@ Restart=on-failure
 WantedBy=multi-user.target
 ```
 
+If you are not familiar with VI/VIM, to save and exit type `:wq` and then press enter/return
+
 # **Move (or copy) the flexfarmer python file into /usr/local/bin**
 
 `sudo cp flexfarmer /usr/local/bin/flexfarmer`
@@ -42,67 +45,97 @@ WantedBy=multi-user.target
 
 `sudo -u flexfarmer mkdir -m 0700 -p /home/flexfarmer/.config/flexfarmer`
 
-**Move (or copy) the config file into usr/local/bin**
+# **Move (or copy) the config file into usr/local/bin**
 
-sudo cp config.yml /home/flexfarmer/.config/flexfarmer/config.yml
+`sudo cp config.yml /home/flexfarmer/.config/flexfarmer/config.yml`
 
-Create the syslog config file
+# **Create the syslog config file**
 
-sudo vim /etc/rsyslog.d/flexfarmer.conf
+`sudo vim /etc/rsyslog.d/flexfarmer.conf`
 
-Past this into config file and :wq + enter to save it
+# **Past this into config file**
 
+```
 if $programname == 'flexfarmer' then /var/log/flexfarmer.log
 & stop
+```
 
-Syslog needs to be able to write to this
+If you are not familiar with VI/VIM, to save and exit type `:wq` and then press enter/return
 
+# **Syslog needs to be able to write to this**
+
+```
 sudo touch /var/log/flexfarmer.log
 sudo chown syslog:adm /var/log/flexfarmer.log
+```
 
-Restart rsyslog
+# **Restart rsyslog**
 
-sudo systemctl restart rsyslog
+`sudo systemctl restart rsyslog`
 
-Restart sysdemctl daemon to load your new service
+# **Restart sysdemctl daemon to load your new service**
 
-sudo systemctl daemon-reload
+`sudo systemctl daemon-reload`
 
-Time to make sure flex farmer is not running
+# **Time to make sure flex farmer is not running**
 
-ps aux | grep flexfarmer
+`ps aux | grep flexfarmer`
 
-Use the PID from the output above
+# **Use the PID from the output above**
 
-sudo kill <PID>
+![image](https://user-images.githubusercontent.com/61926834/128134430-72d57c29-a6f8-4398-ba1d-829675b1d736.png)
+Note that it will show up at least twice because "flexfarmer" is in your grep command, you want the other one and the PID (Process ID) is what is circled here
 
-Start your new service
+`sudo kill <PID>` without the <>
 
-sudo service flexfarmer start
+# **Start your new service**
 
-Verify it is running and there are no errors
+`sudo service flexfarmer start`
 
-service flexfarmer status
+# **Verify it is running and there are no errors**
 
-Enable auto start of service
+`service flexfarmer status`
 
+![image](https://user-images.githubusercontent.com/61926834/128134704-1d616da2-721b-4c46-8151-ee0d4ee6a7e5.png)
+
+Should show as active and the logs below should not be showing any errors.  If it is active but has errors, the service is setup properly and your config.yml probably has something wrong with it
+
+# **Enable auto start of service**
+
+```
 sudo systemctl enable flexfarmer.service
 sudo systemctl start flexfarmer
+```
+# **Optional: Test autostart:**
 
-How to update
+`sudo shutdown -r now`
+
+# **But how do I update FlexFarmer now?**
 
 Download new bundle
-tar -xvzf flexfarmer-linux-*
+`tar -xvzf flexfarmer-linux-*`
 cd into flexfarmer directory
-sudo cp flexfarmer /usr/local/bin/flexfarmer
-Check the config example/templtates and compare to your existing config file incase there are any adjustments that should be made and make them accordingly:
-sudo vim /home/flexfarmer/.config/flexfarmer/config.yml
-sudo systemctl service restart flexfarmer.service
+`sudo cp flexfarmer /usr/local/bin/flexfarmer`
+Check the config example/templtates and compare to your existing config file should there be anything new to add to your config file, if there is then:
+`sudo vim /home/flexfarmer/.config/flexfarmer/config.yml`
+Then restart the service:
+`sudo systemctl service restart flexfarmer.service`
 
 Thanks to u/rnovak for revieweing, making a few suggestions and testing!
   Please visit his blog - [Robert Novak on system administration](https://rsts11.com/)
+  You can also find him in the FlexPool.io Discord under the name @thetasigma06 - please don't tag him, just checkout the [Chia Channel](https://discord.gg/TJhbFP7Y) and join the convo, he'll see you!
   
-  ![image](https://user-images.githubusercontent.com/61926834/128132572-577c0d7c-f879-4677-88a6-02347bd83a83.png)
+Speakering of Robert, he had a great idea to add to this:
 
+## **BONUS: Have more than 1 NFT pointed to FlexPool?**
+
+When you create the flexfarmer.service file, consider something like this:
+
+NFT#1 - flexNFTXXX.service
+NFT#2 - flexNFTZZZ.service
+
+Where you somehow differentiate between your 2x NFT's - maybe last 6 of the Launcher ID or something?  I'd advise againts flexNFT1.service and the like cause then you have to reference something else to know which one you need.
+
+Then, and this should be obvious but...  you will need 2x config.yml files so prettymuch same thing, nftXXXconfig.yml with all the matching "stuff" inside - be sure when creting the service files, you update the ExecStart= line to point to the correct config file for that NFT.
   
   
