@@ -84,8 +84,6 @@ sudo chown syslog:adm /var/log/flexfarmer.log
     daily
     rotate 7
     copytruncate
-    compress
-    delaycompress
     notifempty
     missingok
 }
