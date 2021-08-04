@@ -145,7 +145,8 @@ Check the config example/templtates and compare to your existing config file sho
 Then restart the service:
 `sudo systemctl service restart flexfarmer.service`
 
-Thanks to u/rnovak for revieweing, making a few suggestions and testing!
+# **Thanks to u/rnovak for revieweing, making a few suggestions and testing!**
+
   Please visit his blog - [Robert Novak on system administration](https://rsts11.com/)
   You can also find him in the FlexPool.io Discord under the name @thetasigma06 - please don't tag him, just checkout the [Chia Channel](https://discord.gg/TJhbFP7Y) and join the convo, he'll see you!
   
