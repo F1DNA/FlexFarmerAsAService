@@ -88,8 +88,9 @@ sudo chown syslog:adm /var/log/flexfarmer.log
     missingok
 }
 ```
+If you are not familiar with VI/VIM, to save and exit type `:wq` and then press enter/return
 
-Optional here, you can change daily out for weekly or monthly and change the value of rotate to however many of those days, weeks or months you want to keep
+**Optional: you can change daily out for weekly or monthly and change the value of rotate to however many of those days, weeks or months you want to keep**
 
 # **Restart rsyslog**
 
