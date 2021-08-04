@@ -98,7 +98,7 @@ Note that it will show up at least twice because "flexfarmer" is in your grep co
 
 ![image](https://user-images.githubusercontent.com/61926834/128134704-1d616da2-721b-4c46-8151-ee0d4ee6a7e5.png)
 
-Should show as active and the logs below should not be showing any errors.  If it is active but has errors, the service is setup properly and your config.yml probably has something wrong with it
+Should show as active and the logs below should not be showing any errors.  If it is active but has errors, the service is setup properly and your config.yml probably has something wrong with it.  Don't be alarmed by the "Invalids" - look a little closer, no invalid plots, this is a good thing!
 
 # **Enable auto start of service**
 
