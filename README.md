@@ -5,7 +5,7 @@ Your mileage (Distro) may vary
 
 Ubuntu Server for ARM folks should be able to use this guide as well, pay attention to the note about log files
 
-Visit [FlexPool.io](https://flexpool.io) to join the pool! (Note that I am in no way affiliated with FlexPool other than pointing my NFT's at their address in hopes of getting some mojos in return
+Visit [FlexPool.io](https://flexpool.io) to join the pool! (Note that I am in no way affiliated with FlexPool other than pointing my NFT's at their address in hopes of getting some mojos in return)
 
 Check [r/flexpool](https://www.reddit.com/r/Flexpool/) for a download link of FlexFarmer
 
@@ -70,7 +70,7 @@ if $programname == 'flexfarmer' then /var/log/flexfarmer.log
 
 If you are not familiar with VI/VIM, to save and exit type `:wq` and then press enter/return
 
-Note that if you are doing this on anything using an SD card/flashdrive (Looking at you ARM / RPi folks) for the OS disk, consider sending log files to /dev/shm.  This wull use RAM for the logs so you do not put unneccessary wear on your flash storage.  The caveat of course is, logs will not persist after reboot.  And you will need to account for this change throughout this guide as I will not be mentioning this again.
+Note that if you are doing this on anything using an SD card/flashdrive (Looking at you ARM / RPi folks) for the OS disk, consider sending log files to /dev/shm.  This will use RAM for the logs so you do not put unneccessary wear on your flash storage.  The caveat of course is, logs will not persist after reboot.  And you will need to account for this change throughout this guide as I will not be mentioning this again.
 
 # **Syslog needs to be able to write to this**
 
@@ -163,8 +163,10 @@ Admittedly, syslog mucks things up a bit in regards to how pretty the output is 
 
 # **But how do I update FlexFarmer now?**
 
-Download new bundle
+Download new bundle to somewhere, preferably your /home/<suername> directory
 
+Then extract it:
+    
 `tar -xvzf flexfarmer-linux-*`
 
 cd into flexfarmer directory
