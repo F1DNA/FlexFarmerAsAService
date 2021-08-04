@@ -112,6 +112,24 @@ sudo systemctl start flexfarmer
 
 After reboot, do `service flexfarmer status` and see that everything is A'OK
 
+# **So where is the output now?**
+
+If you notice in the service file you created, you pointed it to syslog.  Then later, you told rsyslog to extract that information and send it to /var/log/flexfarmer.log
+
+You can:
+
+`cat /var/log/flexfarmer.log`
+
+But that just grabs anything up until the moment you `cat` it
+
+`tail -f /var/log/flexfarmer.log`
+
+Ah, that's better, it is "following" the log now but I want to see more before I `tail` 'd it.  Okay, one more for you.
+
+`tail -f -n +0 /var/log/flexfarmer.log`
+
+This will show you the entire log plus continue to follow it.
+
 # **But how do I update FlexFarmer now?**
 
 Download new bundle
