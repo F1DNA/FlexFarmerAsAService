@@ -47,7 +47,7 @@ If you are not familiar with VI/VIM, to save and exit type `:wq` and then press 
 
 `sudo -u flexfarmer mkdir -m 0700 -p /home/flexfarmer/.config/flexfarmer`
 
-# **Move (or copy) the config file into usr/local/bin**
+# **Move (or copy) the config file**
 
 `sudo cp config.yml /home/flexfarmer/.config/flexfarmer/config.yml`
 
