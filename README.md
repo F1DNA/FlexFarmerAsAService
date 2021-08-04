@@ -8,6 +8,8 @@ Check [r/flexpool](https://www.reddit.com/r/Flexpool/) for a download link of Fl
 
 Or - visit the [Discord](https://discord.gg/ck74hAum)
 
+## **Before you get started, please cd into your flexfarmer directory and stay there for the duration**
+
 # **Create the user and group that will run the service**
 
 `sudo useradd -rms /bin/nologin flexfarmer`
