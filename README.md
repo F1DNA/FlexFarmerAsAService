@@ -110,6 +110,8 @@ sudo systemctl start flexfarmer
 
 `sudo shutdown -r now`
 
+After reboot, do `service flexfarmer status` and see that everything is A'OK
+
 # **But how do I update FlexFarmer now?**
 
 Download new bundle
