@@ -2,7 +2,7 @@
 Run FlexFarmer as a service - written for Ubuntu Server
 Your mileage (Distro) may vary
 
-Visit [FlexPool.io](https://flexpool.io) to join the pool! (Note that I am in no way affiliated with FlexPool other than pointing my NFT's at their address in hopes of getting some shinies in return
+Visit [FlexPool.io](https://flexpool.io) to join the pool! (Note that I am in no way affiliated with FlexPool other than pointing my NFT's at their address in hopes of getting some mojos in return
 
 Check [r/flexpool](https://www.reddit.com/r/Flexpool/) for a download link of FlexFarmer
 
@@ -168,3 +168,7 @@ Where you somehow differentiate between your 2x NFT's - maybe last 6 of the Laun
 Then, and this should be obvious but...  you will need 2x config.yml files so prettymuch same thing, nftXXXconfig.yml with all the matching "stuff" inside - be sure when creting the service files, you update the ExecStart= line to point to the correct config file for that NFT.
   
   
+Should you feel compelled, you may send a tip in the form of XCH to: 
+
+xch1u2jhwq9q37v822ejvjytu289th4wad8azuyu7m0gmjuzzzd76dkqx06phs
+
