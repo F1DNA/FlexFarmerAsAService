@@ -73,6 +73,26 @@ sudo touch /var/log/flexfarmer.log
 sudo chown syslog:adm /var/log/flexfarmer.log
 ```
 
+# **Create log rotation config file (Unless you like filling drives)**
+
+`sudo vim /etc/logrotate.d/flexfarmer`
+
+# **Paste in the following**
+
+```
+/var/log/flexfarmer.log {
+    daily
+    rotate 7
+    copytruncate
+    compress
+    delaycompress
+    notifempty
+    missingok
+}
+```
+
+Optional here, you can change daily out for weekly or monthly and change the value of rotate to however many of those days, weeks or months you want to keep
+
 # **Restart rsyslog**
 
 `sudo systemctl restart rsyslog`
