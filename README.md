@@ -132,6 +132,8 @@ Ah, that's better, it is "following" the log now but I want to see more before I
 
 This will show you the entire log plus continue to follow it.
 
+Admittedly, syslog mucks things up a bit in regards to how pretty the output is from the FlexFarmer program.  There is an option in the config.yml to send that output to a log file of your choice if you prefer the pretty.
+
 # **But how do I update FlexFarmer now?**
 
 Download new bundle
