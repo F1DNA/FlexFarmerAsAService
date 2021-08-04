@@ -139,13 +139,21 @@ Admittedly, syslog mucks things up a bit in regards to how pretty the output is 
 # **But how do I update FlexFarmer now?**
 
 Download new bundle
+
 `tar -xvzf flexfarmer-linux-*`
+
 cd into flexfarmer directory
+
 `sudo cp flexfarmer /usr/local/bin/flexfarmer`
+
 Check the config example/templtates and compare to your existing config file should there be anything new to add to your config file, if there is then:
+
 `sudo vim /home/flexfarmer/.config/flexfarmer/config.yml`
+
 Then restart the service:
+
 `sudo systemctl service restart flexfarmer.service`
+
 
 # **Thanks to u/rnovak for revieweing, making a few suggestions and testing!**
 
