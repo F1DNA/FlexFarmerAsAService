@@ -41,6 +41,8 @@ WantedBy=multi-user.target
 
 If you are not familiar with VI/VIM, to save and exit type `:wq` and then press enter/return
 
+Note that if you are doing this on anything using an SD card/flashdrive (Looking at you ARM / RPi folks) for the OS disk, consider sending log files to /dev/shm.  This wull use RAM for the logs so you do not put unneccessary wear on your flash storage.  The caveat of course is, logs will not persist after reboot.  And you will need to account for this change throughout this guide as I will not be mentioning this again.
+
 # **Move (or copy) the flexfarmer python file into /usr/local/bin**
 
 `sudo cp flexfarmer /usr/local/bin/flexfarmer`
