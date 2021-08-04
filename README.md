@@ -22,7 +22,7 @@ Or - visit the [Discord](https://discord.gg/ck74hAum)
 
 ```
 [Unit]
-Description=FlexFarmer as a service - F1DNA
+Description=https://github.com/F1DNA/FlexFarmerAsAService
 After=network.target
 
 [Service]
