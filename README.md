@@ -3,7 +3,9 @@ Run FlexFarmer as a service - written for Ubuntu Server
 Your mileage (Distro) may vary
 
 Visit [FlexPool.io](https://flexpool.io) to join the pool! (Note that I am in no way affiliated with FlexPool other than pointing my NFT's at their address in hopes of getting some shinies in return
-Check r/flexpool for a download link of FlexFarmer
+
+Check [r/flexpool](https://www.reddit.com/r/Flexpool/) for a download link of FlexFarmer
+
 Or - visit the [Discord](https://discord.gg/ck74hAum)
 
 # **Create the user and group that will run the service**
@@ -151,8 +153,10 @@ Speakering of Robert, he had a great idea to add to this:
 
 When you create the flexfarmer.service file, consider something like this:
 
+```
 NFT#1 - flexNFTXXX.service
 NFT#2 - flexNFTZZZ.service
+```
 
 Where you somehow differentiate between your 2x NFT's - maybe last 6 of the Launcher ID or something?  I'd advise againts flexNFT1.service and the like cause then you have to reference something else to know which one you need.
 
