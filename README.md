@@ -195,7 +195,7 @@ Where you somehow differentiate between your 2x NFT's - maybe last 6 of the Laun
 Then, and this should be obvious but...  you will need 2x config.yml files so prettymuch same thing, nftXXXconfig.yml with all the matching "stuff" inside - be sure when creting the service files, you update the ExecStart= line to point to the correct config file for that NFT.
   
   
-Should you feel compelled, you may send a tip in the form of XCH to: 
+**Should you feel compelled, you may send a tip in the form of XCH to:**
 
 xch1u2jhwq9q37v822ejvjytu289th4wad8azuyu7m0gmjuzzzd76dkqx06phs
 
