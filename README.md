@@ -1,6 +1,9 @@
 # FlexFarmer As a Service
 Run FlexFarmer as a service - written for Ubuntu Server
+
 Your mileage (Distro) may vary
+
+Ubuntu Server for ARM folks should be able to use this guide as well, pay attention to the note about log files
 
 Visit [FlexPool.io](https://flexpool.io) to join the pool! (Note that I am in no way affiliated with FlexPool other than pointing my NFT's at their address in hopes of getting some mojos in return
 
