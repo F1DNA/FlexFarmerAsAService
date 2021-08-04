@@ -1,4 +1,4 @@
-## **FlexFarmer As a Service**
+# FlexFarmer As a Service
 Run FlexFarmer as a service - written for Ubuntu Server
 Your mileage (Distro) may vary
 
@@ -15,6 +15,7 @@ Visit [FlexPool.io](https://flexpool.io) to join the pool!
 
 # **Paste this into service file and :wq + enter to save it**
 
+```
 [Unit]
 Description=FlexFarmer as a service - F1DNA
 After=network.target
@@ -31,16 +32,17 @@ Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
+```
 
-Move (or copy) the flexfarmer python file into /usr/local/bin
+# **Move (or copy) the flexfarmer python file into /usr/local/bin**
 
-sudo cp flexfarmer /usr/local/bin/flexfarmer 
+`sudo cp flexfarmer /usr/local/bin/flexfarmer`
 
-Create the directories for the config.yml
+# **Create the directories for the config.yml**
 
-sudo -u flexfarmer mkdir -m 0700 -p /home/flexfarmer/.config/flexfarmer
+`sudo -u flexfarmer mkdir -m 0700 -p /home/flexfarmer/.config/flexfarmer`
 
-Move (or copy) the config file into usr/local/bin
+**Move (or copy) the config file into usr/local/bin**
 
 sudo cp config.yml /home/flexfarmer/.config/flexfarmer/config.yml
 
