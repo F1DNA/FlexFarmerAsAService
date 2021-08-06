@@ -92,6 +92,7 @@ sudo chown syslog:adm /var/log/flexfarmer.log
     copytruncate
     notifempty
     missingok
+    su root syslog
 }
 ```
 If you are not familiar with VI/VIM, to save and exit type `:wq` and then press enter/return
