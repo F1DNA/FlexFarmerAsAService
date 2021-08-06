@@ -61,7 +61,7 @@ If you are not familiar with VI/VIM, to save and exit type `:wq` and then press 
 
 `sudo vim /etc/rsyslog.d/flexfarmer.conf`
 
-# **Past this into config file**
+# **Paste this into config file**
 
 ```
 if $programname == 'flexfarmer' then /var/log/flexfarmer.log
