@@ -184,13 +184,25 @@ Then restart the service:
 
 # **Troubleshooting tips**
     
-Log rotation not rotating?
+**Log rotation not rotating?**
 
-    In the config file, I added `su root syslog` as /var/log is owned by root:syslog in Ubuntu server.  If you are using another distro, you should run `sudo logrotate -vf /etc/logrotate/d/flexfarmer`.  If you get an error such as `error: skipping "/var/log/flexfarmer.log" because parent directory has insecure permissions (It's world writable or writable by group which is not "root")` Set "su" directive in config file to tell logrotate which user/group should be used for rotation. Then check owner of /var/log with `ls -l /var/log` and take note of the user and group from the output.  Example:
+In the config file, I added `su root syslog` as /var/log is owned by root:syslog in Ubuntu server.  If you are using another distro, you should run: 
+
+`sudo logrotate -vf /etc/logrotate/d/flexfarmer`
     
-    `drwxrwxr-x 11 root syslog 4.0K Aug  5 00:00 log`
+If you get an error such as: 
+
+`error: skipping "/var/log/flexfarmer.log" because parent directory has insecure permissions (It's world writable or writable by group which is not "root")` 
     
-Here you can see that the user is 'root' and group is 'syslog'.  If your distro does it any different, then change line 7 of the config file to match: `su user group`
+Set "su" directive in config file to tell logrotate which user/group should be used for rotation. Then check owner of /var/log with: 
+
+`ls -l /var/log` 
+    
+Take note of the user and group from the output.  Example:
+    
+`drwxrwxr-x 11 root syslog 4.0K Aug  5 00:00 log`
+    
+Here you can see that the user is "root" and group is "syslog".  If your distro does it any different, then change line 7 of the config file to match
 
 
 # **Thanks to u/rnovak for revieweing, making a few suggestions and testing!**
