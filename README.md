@@ -188,7 +188,7 @@ Then restart the service:
 
 In the config file, I added `su root syslog` as /var/log is owned by root:syslog in Ubuntu server.  If you are using another distro, you should run: 
 
-`sudo logrotate -vf /etc/logrotate/d/flexfarmer`
+`sudo logrotate -vf /etc/logrotate.d/flexfarmer`
     
 If you get an error such as: 
 
