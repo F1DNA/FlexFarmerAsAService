@@ -5,11 +5,9 @@ Your mileage (Distro) may vary
 
 Ubuntu Server for ARM folks should be able to use this guide as well, pay attention to the note about log files
 
-Visit [FlexPool.io](https://flexpool.io) to join the pool! (Note that I am in no way affiliated with FlexPool other than pointing my NFT's at their address in hopes of getting some mojos in return)
+Visit [FlexPool.io](https://flexpool.io) to join the pool and download FlexFarmer! (Note that I am in no way affiliated with FlexPool other than pointing my NFT's at their address in hopes of getting some mojos in return)
 
-Check [r/flexpool](https://www.reddit.com/r/Flexpool/) for a download link of FlexFarmer
-
-Or - visit the [Discord](https://discord.gg/ck74hAum)
+Come join the [Discord](https://discord.gg/ck74hAum)
 
 ## **Before you get started, please cd into your flexfarmer directory and stay there for the duration**
 
