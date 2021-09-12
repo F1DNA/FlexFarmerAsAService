@@ -9,6 +9,8 @@ Visit [FlexPool.io](https://flexpool.io) to join the pool and download FlexFarme
 
 Come join the [Discord](https://discord.gg/ck74hAum)
 
+# **If you have multiple NFTs to point to FlexPool, see the end of this README for a tip on setting this up**
+
 ## **Before you get started, please cd into your flexfarmer directory and stay there for the duration**
 
 # **Create the user and group that will run the service**
