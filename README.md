@@ -26,7 +26,6 @@ Come join the [Discord](https://discord.gg/ck74hAum)
 ```
 [Unit]
 Description=https://github.com/F1DNA/FlexFarmerAsAService
-LimitNOFILE=99999
 After=network.target
 
 [Service]
@@ -34,6 +33,7 @@ Type=simple
 User=flexfarmer
 Group=flexfarmer
 ExecStart=/usr/local/bin/flexfarmer -c /home/flexfarmer/.config/flexfarmer/config.yml
+LimitNOFILE=99999
 StandardOutput=syslog
 StandardError=syslog
 SyslogIdentifier=flexfarmer
